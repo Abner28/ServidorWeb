@@ -9,7 +9,13 @@ body {
     margin-top: 0px;
     margin-bottom: 30px;
     height: 500px;
+    text-align: center;
   }
+
+p {
+    font-size: 25px;
+    font-family: 'Source Sans Pro';
+}
 
 /*Sidebar configuration*/
   ul {
