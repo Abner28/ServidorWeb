@@ -8,7 +8,6 @@ body {
     margin-right: 30px;
     margin-top: 0px;
     margin-bottom: 30px;
-    height: 500px;
     text-align: center;
   }
 
@@ -41,4 +40,46 @@ p {
 
   .active {
     background-color: #04AA6D;
+  }
+
+  /* Table configuration */
+  table{
+    border: 1px solid black;
+    border-radius: 10px;
+    border-color: rgb(136, 3, 3);
+    border-collapse: separate;
+    border-spacing: 30px;
+    table-layout: auto;
+  }
+
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 2px;
+    cursor: pointer;
+  }
+
+  .jouer-button {
+    background-color: rgb(199, 53, 53);
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    cursor: pointer;
   }
