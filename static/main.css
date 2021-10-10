@@ -1,0 +1,100 @@
+html{
+    background-color: rgb(136, 3, 3);
+}
+
+body {
+    background-color: white;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+p {
+    font-size: 25px;
+    font-family: 'Source Sans Pro';
+}
+
+/*Sidebar configuration*/
+  ul {
+    list-style-type:none;
+    margin-top: 5px;
+    padding: 0;
+    overflow: hidden;
+    display:flex;
+    background-color: #333;
+    justify-content: center;
+  }
+  
+  li a{
+    display: list-item;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+
+  .active {
+    background-color: #04AA6D;
+  }
+
+  /* Table configuration */
+  table{
+    border: 1px solid black;
+    border-radius: 10px;
+    border-color: rgb(136, 3, 3);
+    border-collapse: separate;
+    border-spacing: 30px;
+    table-layout: auto;
+  }
+
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 2px;
+    cursor: pointer;
+  }
+
+  .jouer-button {
+    background-color: rgb(199, 53, 53);
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  .finir-button {
+    background-color: rgb(2, 70, 255);
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+  }
