@@ -2,17 +2,22 @@ html{
     background-color: rgb(136, 3, 3);
 }
 
+h1, h2, h3{
+color: rgb(136, 3, 3);
+}
+
 body {
     background-color: white;
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 0px;
     margin-bottom: 30px;
+    height: 550px;
     text-align: center;
   }
 
 p {
-    font-size: 25px;
+    font-size: 22.5px;
     font-family: 'Source Sans Pro';
 }
 
@@ -83,7 +88,11 @@ p {
     margin-bottom: 15px;
     cursor: pointer;
   }
-
+.bullet{
+  font-size: 22px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
   .finir-button {
     background-color: rgb(2, 70, 255);
     border: none;
@@ -98,3 +107,5 @@ p {
     cursor: pointer;
 
   }
+
+  .ignore-css{all:unset;}

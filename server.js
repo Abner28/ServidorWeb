@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
     res.redirect(301, '/static/index.html')
 })
 
+
 app.get(encodeURI('/lancers'), (req, res) => {
 
     let results = projet.jouerLeDe();
