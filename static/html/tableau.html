@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Tableau De Bord</title>  
+        <link href="../main.css" rel="stylesheet">
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="../node_modules/bootstrap//dist/js/bootstrap.bundle.min.js"></script>
+
+        <body>
+
+            <ul>
+                <li><a href="../index.html">Maison</a></li>
+                <li><a href="jouer.html">Jouer</a></li>
+                <li><a class="active" href="tableau.html"><strong>Tableau de Bord</strong></a></li>
+                <li><a href="regles.html">Règles</a></li>
+                <li><a href="auteurs.html">Auteurs</a></li>
+            </ul>
+
+            <div id="main">
+                <div>
+                    <p>Ici, on va voir le score de tous les jouers...</p>
+                </div>
+
+            <script> 
+                main = document.querySelector("#main")
+                        fetch("/api/read")
+                            .then(response => response.json())
+                            .then(data => {
+                                // console.log(data)
+                                for (const score of data) {
+                                    // console.log(message)
+
+                                    card = document.createElement("div")
+                                    card.classList.add("card")
+                                    cardBody = document.createElement("div")
+                                    cardBody.classList.add("card-body")
+                                    card.appendChild(cardBody)
+
+                                    element = document.createElement("h5")
+                                    element.classList.add("card-title")
+                                    element.innerText = score.pseudo
+                                    cardBody.appendChild(element)
+
+                                    element = document.createElement("h6")
+                                    element.classList.add("card-subtitle", "mb-2", "text-muted")
+                                    element.innerText = score.score
+                                    cardBody.appendChild(element)
+
+                                    main.appendChild(card)
+                                }
+                            })
+            </script>
+
+        </body>    
+    </head>
+</html>   

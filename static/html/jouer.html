@@ -18,6 +18,7 @@
             <ul>
                 <li><a href="../index.html">Maison</a></li>
                 <li><a class = "active" href="jouer.html"><strong>Jouer</strong></a></li>
+                <li><a href="tableau.html">Tableau de Bord</a></li>
                 <li><a href="regles.html">Règles</a></li>
                 <li><a href="auteurs.html">Auteurs</a></li>
             </ul>
@@ -106,8 +107,27 @@
                         alert("Vous devez lancer les dés au moins 1 fois !")
                         event.preventDefault();
                 } else{
+
+                    data = {
+                            "pseudo": document.querySelector("#form-input").value,
+                            "score": document.querySelector("#Score").value
+                            }
+
+                             fetch("/cookie/?pseudo=" + data.pseudo)
+                             fetch("/api/create", {
+                                    'method': "POST",
+                                    'headers': {
+                                        'Content-Type': 'application/json'
+                                    },
+                                    'body': JSON.stringify(data)
+                                })
+
                         alert("Votre score a été bien enregistré: " + document.querySelector('#Score').value)
                         event.preventDefault();
+
+                        console.log(JSON.stringify(data, null, 2))
+                        event.preventDefault()
+                        location.reload()
                 }
             })
 
