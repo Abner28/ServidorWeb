@@ -86,11 +86,12 @@
                         .then(data => {
 
                     if ((document.querySelector("#lancers-restants").value <= 0 || document.getElementById("form-input").value.length == 0)){
-                        document.getElementById("jouer-button").click();
+                        document.getElementById("jouer-button").disabled = True;
+                        
 
                 } else{
 
-                    document.getElementById("jouer-button").disabled = false;
+                    //document.getElementById("jouer-button").click();
                     document.querySelector("#de1").textContent = data.d1; 
                     document.querySelector("#de2").textContent = data.d2;
                     document.querySelector("#de3").textContent = data.d3;
